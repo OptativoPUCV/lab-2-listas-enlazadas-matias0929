@@ -54,11 +54,15 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    while(list-> current ->next== NULL){
+    if (list->current == NULL)return list -> current;
+    if(list -> current->next==NULL) return list -> current ->next;
+    while(list-> current ->next=! NULL){
+        if(list -> current ->next == NULL) return list -> current ->next;
+        list -> current = list -> current->next;
 
     }
 
-    return NULL;
+
 }
 
 void * prevList(List * list) {

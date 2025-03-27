@@ -56,3 +56,17 @@ Thu, Mar 27, 2025  6:03:07 PM:
  tests:  5|4
 total_score: 25/70
 b231854
+Thu, Mar 27, 2025  6:06:20 PM: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'lastList':
+list.c:59:32: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     while(list-> current ->next=! NULL){
+                                ^
+list.c:59:5: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     while(list-> current ->next=! NULL){
+     ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+08bd092
