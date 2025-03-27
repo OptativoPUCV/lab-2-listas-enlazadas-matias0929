@@ -70,3 +70,33 @@ list.c:59:5: error: suggest parentheses around assignment used as truth value [-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 08bd092
+Thu, Mar 27, 2025  6:07:42 PM: 
+ list.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+test.c: In function 'lastList':
+test.c:448:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:468:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:448:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+In file included from test.c:5:0:
+list.c:95:6: error: 'cleanList' defined but not used [-Werror=unused-function]
+ void cleanList(List * list) {
+      ^~~~~~~~~
+list.c:86:8: error: 'popBack' defined but not used [-Werror=unused-function]
+ void * popBack(List * list) {
+        ^~~~~~~
+list.c:73:6: error: 'pushBack' defined but not used [-Werror=unused-function]
+ void pushBack(List * list, void * data) {
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f9d64f0

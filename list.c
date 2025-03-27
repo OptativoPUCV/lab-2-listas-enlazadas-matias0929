@@ -53,17 +53,15 @@ void * nextList(List * list) {
     return list -> current ->data;
 }
 
-void * lastList(List * list) {
-    if (list->current == NULL)return list -> current;
-    if(list -> current->next==NULL) return list -> current ->next;
-    while(list-> current ->next=! NULL){
-        if(list -> current ->next == NULL) return list -> current ->next;
-        list -> current = list -> current->next;
-
+void * lastList(List *list) {
+    if (list->current == NULL) {
+        return NULL;  
+    while (list->current->next != NULL) {
+        list->current = list->current->next;
     }
-
-
+    return list->current->data;  
 }
+
 
 void * prevList(List * list) {
     return NULL;
